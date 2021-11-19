@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+<style>
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Helvetica, sans-serif;
+        font-weight: 300;
+        font-size: 1em;
+        line-height: 1.6;
+
+        background-color: #F2F2F2;
+
+        z-index: 0;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    img,
+    p {
+        margin: 0;
+        transform-style: preserve-3d;
+    }
+
+    img {
+        width:100%;
+    }
+
+    .website-wrapper {
+        transform-style: preserve-3d;
+        margin: 50px 3em;
+        z-index: -1;
+        display:  block;
+    }
+
+    .website-wrapper {
+        transform-style: preserve-3d;
+        margin: 50px 3em;
+        z-index: -1;
+        display:  block;
+    }
+
+    .nav-wrapper {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 50px;
+
+        display:flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: space-between;
+
+        /* border: 2px solid blue; */
+        
+        z-index: 1;
+    }
+
+    .nav-wrapper img:hover {
+      transform: scale(1.1);
+    }
+
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        width:200px;
+    }
+
+   
+
+    .nav-menu > ul{
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: flex-end;
+        
+        /* border: 2px solid red; */
+
+    }
+
+    .nav-menu > ul > li{
+        list-style-type: none;
+        padding-left: 0.7rem;
+    }
+
+    .nav-menu > ul > li{
+        list-style-type: none;
+        padding-left: 0.7rem;
+    }
+
+
+
+    .nav-menu a,
+        a:link,
+        a:visited {
+          font-family: 'Cormorant Garamond', serif;
+          width: 50px;
+          font-size: 16px;
+          color: black;
+              text-decoration: none;
+    }
+
+    .nav-menu a:hover,
+    a:active {
+      color: red;
+    }
+
+    .content-wrapper{
+        width: 100%;
+    }
+
+    .page-heading {
+        display: flex;
+        flex-direction: column;
+        width:100%;
+    }
+
+    .page-title {
+        padding-bottom: 0.5em;
+        text-align: center;
+        margin-top: 1em;
+        font-size: 1em;
+        font-weight:400;
+    }
+
+    .gallery-wrapper {
+        display:flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        height: auto;
+        align-items: flex-end;
+        justify-content: center;
+        /* border: 2px solid blue; */
+        margin: auto;
+        margin-top: 2em;
+    }
+
+    .gallery-collection {
+      display: block;
+      margin-left: auto;
+      margin-right: right;
+      margin-top: 1em;
+      margin-bottom: 4em;
+
+    }
+
+    .gallery-content {
+      position: relative;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));;
+      grid-gap: 4em;
+      width: 100%;
+      height: auto;
+      /* background-color: red; */
+      align-items: flex-end;
+      justify-items: center;
+      margin-top: 2em;
+
+    }
+
+    .gallery-item {
+      width: 100%;
+      height: auto;
+      /* background-color: yellow; */
+      /* border: 2px solid yellow; */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    .gallery-item > p {
+      margin-top: 1em;
+      font-size: .8em;
+    } 
+
+
+    .gallery-landscape {
+        position: relative;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+
+    .gallery-portrait {
+      position: relative;
+      width: 80%;
+      /* margin: auto; */
+    }
+
+    .gallery-header {
+      font-size: 2em;
+      justify-content: center;
+      border-bottom: .05em solid black;
+      padding-bottom: 0.5rem;
+      padding-top: .5rem;
+    }
+
+    .gallery-subheader {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .project-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+        width: 80%;
+        margin: 3em auto;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .project-header {
+        font-size: 1.2em;
+        font-weight: 500;
+        padding-bottom: .3em;
+        text-align: center;
+    }
+
+    .project-info-content {
+        text-align: center;
+    }
+
+    .project-description {
+        max-width: 80%;
+        margin: auto;
+    }
+
+
+
+    </style>
+
+    <body>
+
+        <div class="website-wrapper">
+            <div class="nav-wrapper">
+                <div>
+                    <a href="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Index/Website 4.html">
+                    <img class="nav-logo"  src="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Images/StandingON_Logo_2.svg" alt="Standing On Design Primary Logo">
+                </a>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                    <li><a href="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Index/About.html"> About </a></li>
+                    <li><a href="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Index/Portfolio.html"> Portfolio </a></li>
+                    <li><a href="mailto:stuart.crake@gmail.com?subject=Enquiry"> Contact </a></li>
+                    </ul>
+                </div>
+            </div>
+
+        
+            <div class="gallery-wrapper">
+                <div class="gallery-collection">
+
+                  <div class="gallery-header">
+                    <h1 class="page-title">Mid-Century Modern Apartment</h1>
+                  </div>
+                  <div class="project-info">
+                        
+                        <div>
+                            <h3 class="project-header">Client</h3>
+                            <p class="project-info-content">Private</p>
+                        </div>
+                    
+                        <div>
+                            <h3 class="project-header">Site</h3>
+                            <p class="project-info-content">672 Bourke St, Melbourne.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="project-header">Year</h3>
+                            <p class="project-info-content">2020</p>
+                        </div>
+
+                        <div>
+                            <h3 class="project-header">Project Type</h3>
+                            <p class="project-info-content">Student - Residential</p>
+                        </div>
+                    </div>  
+                    <div class="project-description">
+                        <h3 class="project-header">Project Description</h3>
+                            <p class="project-info-content">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo esse aut est. Blanditiis totam repudiandae quas officiis corporis quaerat soluta tenetur, nemo enim rem vel consequatur ipsam accusamus. Sit, laborum.
+                                Numquam quae odio amet eius ullam molestias sit quo nihil veniam voluptates dolorum, nemo facere nam, rem voluptatem obcaecati enim laborum culpa, dolorem suscipit velit tempora doloribus pariatur ex. Tempora?
+                                Ipsa dicta autem itaque deserunt sit nobis porro qui? Beatae cumque ullam ut nesciunt consectetur eveniet. At aspernatur voluptatem, aliquid odit rem quaerat totam illum perferendis nesciunt vitae suscipit saepe!
+                                Eius aperiam nesciunt alias quasi illo labore recusandae quas, ipsum assumenda. Officiis dolore cupiditate ipsa aliquid enim dolor, in rem libero architecto? Fugit soluta quo officia fuga ratione repellat ea.
+                                Maiores quasi vel ducimus quisquam sit nihil totam laudantium, voluptas nisi, nesciunt odio? Dicta fugiat minima tempore fuga neque dolorum debitis! Et error delectus, quia veritatis perferendis eligendi molestias possimus.
+                                Doloribus saepe cum repellendus repellat nemo accusantium aut magni eos quidem sint recusandae odit voluptates, quae numquam. Quasi, delectus voluptatum, ipsa ut ea quia atque nemo in esse sapiente libero!
+                                Veritatis deleniti ducimus dolorem ipsum impedit id voluptatum nemo, quisquam aliquam necessitatibus odio, ipsa soluta consequatur voluptate sit odit vitae officia ad laboriosam est magni a totam magnam. Aliquam, fugit?
+                                Alias ipsum veniam nesciunt a at explicabo in harum adipisci cumque, quidem cum magnam similique laudantium, eius officia consequuntur et delectus quaerat amet. Qui dolore distinctio cumque quibusdam atque laudantium.
+                                Sit hic ea assumenda cumque tempora, quae, sunt, cum libero modi aut unde nam dolores dolorum ab? Sunt, voluptatem, quasi incidunt ad ratione nemo quibusdam odio laborum nesciunt placeat cumque.
+                                Veritatis quidem qui unde neque vitae provident exercitationem blanditiis labore quam placeat animi dolores ut minima voluptatum voluptates fugiat ab consequuntur, quas molestias! Ipsum repellat voluptatum totam, veniam eos libero.
+                            </p>
+                    </div>
+                  </div>
+  
+                  <div class="gallery-content">
+                    <div class="gallery-item">
+                        <div class="gallery-landscape"><img src="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Images/2020 - 01 - Mid-Century Apartment/TRIM1_MOODBOARD.jpg" alt="test3"></div>
+                        <p>Colour Moodboard</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <div class="gallery-landscape"><img src="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Images/2020 - 01 - Mid-Century Apartment/CMB_BED_AT1.png" alt="test3"></div>
+                        <p>Bedroom Moodboard</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <div class="gallery-landscape"><img src="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Images/2020 - 01 - Mid-Century Apartment/CMB_TRANSITION_AT1.png" alt="test3"></div>
+                        <p>Transition Moodboard</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <div class="gallery-landscape"><img src="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Images/2020 - 01 - Mid-Century Apartment/CMB_BATH_AT1.png" alt="test3"></div>
+                        <p>Bathroom Moodboard</p>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="gallery-landscape">
+                            <img src="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Images/2020 - 01 - Mid-Century Apartment/Trim1_Floorplan.png" alt="test3">
+                          </div>
+                        <p>Floorplan</p>
+                      </div>
+
+                    <div class="gallery-item">
+                      <div class="gallery-portrait">
+                          <img src="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Images/2020 - 01 - Mid-Century Apartment/Trim1_Vignette_Bedroom.png" alt="test3">
+                        </div>
+                      <p>Bedroom Vignette</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <div class="gallery-portrait"><img src="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Images/2020 - 01 - Mid-Century Apartment/Trim1_Vignette_Transition.png" alt="test3"></div>
+                        <p>Transition Vignette</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <div class="gallery-portrait"><img src="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Images/2020 - 01 - Mid-Century Apartment/Trim1_Vignette_Bathroom.png" alt="test3"></div>
+                        <p>Bathroom Vignette</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <div class="gallery-landscape"><img src="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Images/2020 - 01 - Mid-Century Apartment/Trim1_Illustration_Bedroom.jpg" alt="test3"></div>
+                        <p>Bedroom Sketch</p>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="gallery-landscape"><img src="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Images/2020 - 01 - Mid-Century Apartment/Trim1_Illustrations_EntranceWardrobe.jpg" alt="test3"></div>
+                        <p>Transition Space Sketch</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <div class="gallery-portrait"><img src="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Images/2020 - 01 - Mid-Century Apartment/Trim1_Bath_Bathtub.png" alt="test3"></div>
+                        <p>Bathroom Render 1</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <div class="gallery-portrait"><img src="/Users/stuart.crake/Documents/Stuart Crake Design/Atom/Standing ON. Website/Images/2020 - 01 - Mid-Century Apartment/Trim1_Bath_Basins.png" alt="test3"></div>
+                        <p>Bathroom Render 2</p>
+                    </div>
+  
+                    
+                
+                  </div>
+                
+                  
+                
+  
+                </div>  
+
+            
+        
+    </div>
+
+    </body> 
+
+            
+    </html>
+
