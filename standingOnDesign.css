@@ -33,9 +33,7 @@ line-height: 1.6;
 background-color:#f2f2f2;
 
 z-index: 0;
-
 }
-
 
 img {
     width:100%;
@@ -45,10 +43,6 @@ img {
     padding: 3%;
     width: 100%;
 }
-
-
-
-
 
 .nav-wrapper {
     position: -webkit-sticky;
@@ -68,19 +62,18 @@ img {
 
 }
 
-.nav-wrapper img:hover {
-    transform: scale(1.1);
-}
-
-
 .nav-logo {
     display: flex;
     align-items: center;
     justify-content: center;
     max-width: 300px;
-    /* margin: auto; */
-    /* border: 2px solid red; */
 
+    transform: scale(1);
+    transition: transform 150ms ease-out;
+}
+
+.nav-logo:hover {
+    transform: scale(1.1);
 }
 
 
@@ -133,7 +126,7 @@ a:active {
     position: relative;
     /* border: 2px solid cyan;
     background-color: cornflowerblue; */
-    width: 60%;
+    width: 100%;
     margin-top: 5em;
     margin-bottom: 3em;
     margin-left: auto;
@@ -142,6 +135,10 @@ a:active {
 
 .gallery-item-portrait {
     width: 40%;
+}
+
+.gallery-item-landscape {
+    width: 60%;
 }
 
 .gallery-item > img {
@@ -168,11 +165,15 @@ a:active {
 }
 
 .gallery-item:nth-child(5) {
-    margin-left: 32%;
+    margin-left: 30%;
 }
 
 .gallery-item:nth-child(6) {
     margin-left: 10%;
+}
+
+.gallery-item > figure > figcaption {
+    margin-top: .5em;
 }
 
 
@@ -204,6 +205,12 @@ a:active {
         margin-top: 2em;
     }
 
+    .aboutitem img {
+        border-radius: 1%;
+        max-width: 100%;
+        margin: auto;
+        z-index: -1;
+    }
     /*Portfolio Page CSS */
     
     .port-gallery-wrapper {
@@ -220,11 +227,21 @@ a:active {
 }
 
 .port-gallery-collection {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     margin-left: auto;
     margin-right: right;
     margin-top: 1em;
     margin-bottom: 6em;
+
+    width: 100%;
+    height: auto;
+
+    border: 2px solid red;
+
     }
 
     .port-gallery-content {
@@ -264,19 +281,29 @@ a:active {
     font-weight:400;
     }
 
-    .hover-utility img:hover {
-        opacity: 0.6;
+    .hover-utility {
+    /* opacity: 0.6; */
+    transform: scale(1);
+    transition: transform 200ms ease-out;
     }
+
+    .hover-utility:hover {
+        /* opacity: 0.6; */
+        transform: scale(1.1);
+        }
+
+
+
 
 
     .gallery-header {
     display: flex;
     justify-content: center;
 
-    font-size: 2em;
+    font-size: 1.5em;
 
     border-bottom: .05em solid black;
-    padding-bottom: 0.5em;
+    margin-bottom: 2em;
     padding-top: .1rem;
     }
 
@@ -382,9 +409,6 @@ a:active {
 
     }
 
-
-
-
     .nav-menu > ul{
         display: flex;
         flex-direction: row;
@@ -398,6 +422,11 @@ a:active {
         margin-bottom: 3em;
         width: 100%;
 
+    }
+
+    .aboutitem img {
+        margin-top: 2em;
+        max-width: 100%;
     }
 
 }
