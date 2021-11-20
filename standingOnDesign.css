@@ -45,9 +45,8 @@ img {
 
 .website-wrapper {
     transform-style: preserve-3d;
-    margin: 10% 2%;
+    margin: 2% 2%;
     z-index: -1;
-    display:block;
 }
 
 section {
@@ -115,8 +114,6 @@ section {
     padding-left: 0.7rem;
 }
 
-
-
 .nav-menu a,
 a:link,
 a:visited {
@@ -132,7 +129,6 @@ a:active {
 }
 
 /* Index Page Specific */
-
 .gallery-wrapper {
     display:flex;
     flex-direction: column-reverse;
@@ -267,9 +263,10 @@ a:active {
     margin-right: auto;
     }
 
-    .port-gallery-item > p {
+    .port-gallery-item > p, .double-image > p {
     margin-top: 1em;
-    font-size: .6em;
+    font-size: 1em;
+    text-align: center;
     } 
 
     .port-gallery-item > h1 {
@@ -281,9 +278,17 @@ a:active {
     .gallery-header {
     display: flex;
     justify-content: center;
-    border-bottom: .1em solid black;
+
+    font-size: 2em;
+
+    border-bottom: .05em solid black;
     padding-bottom: 0.5em;
-    padding-top: 2em;
+    padding-top: .1rem;
+    }
+
+    .gallery-subheader {
+        display: flex;
+        flex-direction: column;
     }
 
 
@@ -300,6 +305,59 @@ a:active {
     margin: auto;
     }
 
+    .span-two-col {
+        grid-column: span 2;
+    }
+
+    .span-four-col {
+        grid-column: span 4;
+    }
+
+    .span-two-row {
+        grid-row: span 2;
+    }
+
+
+    /* Portfolio Subpage Specific */
+
+    .page-heading {
+        display: flex;
+        flex-direction: column;
+        width:100%;
+    }
+
+    .page-title {
+        padding-bottom: 0.5em;
+        text-align: center;
+        margin-top: 1em;
+        font-size: 1em;
+        font-weight:400;
+    }
+
+    .project-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+        width: 80%;
+        margin: 3em auto;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .project-header {
+        font-size: 1.2em;
+        font-weight: 700;
+        padding-bottom: .3em;
+        text-align: center;
+    }
+    
+    .project-info-content {
+        text-align: center;
+    }
+
+    .project-description {
+        max-width: 80%;
+        margin: auto;
+    }
 
 
 /* Media Queries  */
