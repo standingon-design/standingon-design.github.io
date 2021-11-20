@@ -7,7 +7,6 @@ box-sizing: border-box;
 
 html, body {
     max-width: 100%;
-    overflow-x: hidden;
 }
 
 .clearfix::after {
@@ -35,7 +34,6 @@ background-color:#f2f2f2;
 
 z-index: 0;
 
-overflow-y: auto;
 }
 
 
@@ -44,16 +42,11 @@ img {
 }
 
 .website-wrapper {
-    transform-style: preserve-3d;
-    margin: 2% 2%;
-    z-index: -1;
+    padding: 3%;
+    width: 100%;
 }
 
-section {
-    transform-style: preserve-3d;
-    padding: 1.5rem 0;
-    z-index: -1;
-}
+
 
 
 
@@ -66,13 +59,13 @@ section {
     flex-direction: row;
 
     align-items: center;
+    justify-content: space-between;
 
-    /* border: 2px solid blue; */
-    width: auto;
     
     z-index: 1;
 
-    /* border: 1px solid red; */
+    width: 100%;
+
 }
 
 .nav-wrapper img:hover {
@@ -84,34 +77,30 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
+    max-width: 300px;
     /* margin: auto; */
     /* border: 2px solid red; */
 
 }
 
-.nav-menu {
-    margin-left: auto;
-    /* border: 2px solid yellow; */
-}
-
-
 
 .nav-menu > ul{
     display: flex;
     flex-direction: row;
+    margin: 0;
+    padding: 0;
 
     align-items: center;
-    justify-content: flex-end;
+    justify-items: flex-end;
     
-    /* border: 2px solid red; */
-
+    width: 100%;
+    height: auto;
 }
 
 
 .nav-menu > ul > li{
     list-style-type: none;
-    padding-left: 0.7rem;
+    margin-left: 1rem;
 }
 
 .nav-menu a,
@@ -243,7 +232,7 @@ a:active {
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));;
-    grid-gap: 4em;
+    grid-gap: 5em;
     width: 100%;
     height: auto;
     /* background-color: red; */
@@ -275,6 +264,11 @@ a:active {
     font-weight:400;
     }
 
+    .hover-utility img:hover {
+        opacity: 0.6;
+    }
+
+
     .gallery-header {
     display: flex;
     justify-content: center;
@@ -301,7 +295,7 @@ a:active {
 
     .gallery-portrait {
     position: relative;
-    width: 80%;
+    width: 70%;
     margin: auto;
     }
 
@@ -346,7 +340,7 @@ a:active {
     .project-header {
         font-size: 1.2em;
         font-weight: 700;
-        padding-bottom: .3em;
+        padding-top: 1em;
         text-align: center;
     }
     
@@ -364,20 +358,56 @@ a:active {
 
 
 @media (max-width: 1140px) {
+
+    body {
+        width: 100%;
+        margin: 20px 20px 20px 20px;
+    }
+
     .nav-wrapper {
     position: -webkit-sticky;
     position: sticky;
     top: 50px;
-    display: block;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+
+    width: 100%;
+    height: auto;
+
     }
+
+
+
 
     .nav-menu > ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+        
         padding: 0;
-        justify-content: flex-start;
+
+        margin: 0;
+        margin-top: 1em;
+        margin-bottom: 3em;
+        width: 100%;
+
     }
 
-    .nav-menu > ul > li {
-        padding: 0;
-        margin-right: 0.7em;
-    }
+}
+
+/* Image Utility Class */
+
+.incomplete-project > div > img{
+    opacity:0.4;
+}
+
+.incomplete-project > p{
+    text-transform:uppercase;
 }
