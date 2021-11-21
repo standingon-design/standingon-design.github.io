@@ -385,6 +385,15 @@ a:active {
         max-height: 100%;
     }
 
+    .port-gallery-wrapper {
+        width: 100%;
+    }
+
+    .gallery-item-landscape {
+        width: 100%;
+    }
+    
+
     .port-gallery-content {
         margin-top: 2em;
         margin-bottom: 2em;
