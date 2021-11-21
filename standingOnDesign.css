@@ -375,6 +375,10 @@ a:active {
         margin-bottom: 2em;
     }
 
+    .gallery-item > figure > figcaption {
+        font-size: 0.2em;
+    }
+
     .gallery-item-portrait {
         width: 100%;
         max-height: 100%;
