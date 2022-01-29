@@ -125,7 +125,7 @@ a:active {
     display:flex;
     flex-direction: column;
     position: relative;
-    width: 80%;
+    width: 70%;
     height: auto;
     align-items: flex-end;
     justify-content: center;
@@ -206,7 +206,7 @@ a:active {
     justify-content: center;
 
     margin-left: auto;
-    margin-right: right;
+    margin-right: auto;
     margin-top: 1em;
     margin-bottom: 6em;
 
@@ -226,7 +226,7 @@ a:active {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: auto;
     grid-gap: 4em; */
-    width: 80%;
+    width: 100%;
     height: auto;
     
     align-items: flex-end;
@@ -263,8 +263,6 @@ a:active {
     font-weight:400;
     }
 
-    
-
     .gallery-header {
         width: 100%;
 
@@ -283,7 +281,6 @@ a:active {
         flex-direction: column;
     }
 
-
     .gallery-landscape {
     position: relative;
     width: 100%;
@@ -293,7 +290,7 @@ a:active {
 
     .gallery-portrait {
     position: relative;
-    width: 50%;
+    width: 60%;
     margin: auto;
     }
 
